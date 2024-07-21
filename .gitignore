@@ -1,0 +1,6 @@
+# Pastas
+minio/
+.venv/
+
+# Arquivos
+.env
