@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from utils.s3_mock import __create_connection, __create_bucket, __to_s3
+from utils.s3_mock import __create_connection, __create_bucket, __to_s3_partitioned
 
 if __name__ == "__main__":
     #============================================
@@ -30,4 +30,4 @@ if __name__ == "__main__":
     s3_client = __create_connection(url, access_key, secret_key)
 
     __create_bucket(s3_client, bucket_name)
-    __to_s3(s3_client, bucket_path, bucket_name, partition_fields, data)
+    __to_s3_partitioned(s3_client, bucket_path, bucket_name, partition_fields, data)

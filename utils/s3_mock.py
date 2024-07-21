@@ -51,7 +51,7 @@ def __create_bucket(s3_client, bucket_name: str):
         else:
             print(f'Criação do bucket falhou: {e}')
 
-def __to_s3(s3_client, bucket_path: str, bucket_name: str, partition_fields: list, data: list):
+def __to_s3_partitioned(s3_client, bucket_path: str, bucket_name: str, partition_fields: list, data: list):
     '''
     objectives:
         Carregar dados no bucket designado, particionando o chave por uma chave ou mais.
